@@ -1,9 +1,23 @@
 /*----- constants -----*/ 
 const colors = {
-    '1': 'lime',
-    '-1': 'purple',
-    '0': 'white'
+    '1': 'pueple',
+    '-1': 'lime',
+    'null': 'white'
 }
+
+var win = [
+  [x, 'null', 'null', x, 'null', 'null', x, 'null', 'null'],
+  ['null', x, 'null', 'null', x, 'null', 'null', x, 'null'],
+  ['null', 'null', x, 'null', 'null', x, 'null', 'null', x],
+  [x, x, x, 'null', 'null', 'null', 'null', 'null', 'null'],
+  ['null', 'null', 'null', x, x, x, 'null', 'null', 'null'],
+  ['null', 'null', 'null', 'null', 'null', 'null', x, x, x],
+  [x, 'null', 'null', 'null', x, 'null', 'null', 'null', x],
+  ['null', 'null', x, 'null', x, 'null', x, 'null', 'null'],
+  ];
+
+  
+  
 
 /*----- app's state (variables) -----*/
 var board, turn;
@@ -65,7 +79,7 @@ if (winner) {
 }
 
 function init() {
-    board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    board = ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'];
     winner = null;
     turn = 1;
     render();
