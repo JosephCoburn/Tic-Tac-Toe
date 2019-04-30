@@ -1,17 +1,31 @@
 /*----- constants -----*/ 
 const colors = {
-    '1': 'lime',
-    '-1': 'purple',
-    '0': 'white'
+  '1': 'pueple',
+  '-1': 'lime',
+  'null': 'white'
 }
+
+var win = [
+[x, 'null', 'null', x, 'null', 'null', x, 'null', 'null'],
+['null', x, 'null', 'null', x, 'null', 'null', x, 'null'],
+['null', 'null', x, 'null', 'null', x, 'null', 'null', x],
+[x, x, x, 'null', 'null', 'null', 'null', 'null', 'null'],
+['null', 'null', 'null', x, x, x, 'null', 'null', 'null'],
+['null', 'null', 'null', 'null', 'null', 'null', x, x, x],
+[x, 'null', 'null', 'null', x, 'null', 'null', 'null', x],
+['null', 'null', x, 'null', x, 'null', x, 'null', 'null'],
+];
+
+
+
 
 /*----- app's state (variables) -----*/
 var board, turn;
 
 var winner = {
-    'T': 'tie',
-    'W': 'winner',
-    'P': 'playing'
+  'T': 'tie',
+  'W': 'winner',
+  'P': 'playing'
 };
 
 var sq1;
@@ -34,7 +48,7 @@ var sq9;
 init();
 
 function handleClick(evt) {
-    turn *= -1;
+  turn *= -1;
 }
 
 function getWinner() {
@@ -50,23 +64,23 @@ function checkHorizontal(column) {
 }
 
 function render() {
-    board.forEach(function(idx) {}
+  board.forEach(function(idx) {}
 };
 
 if (winner) {
-    if (winner === 'T') {
-      msgEl.textContent = "It's a Tie!";
-    } else {
-
-    }
+  if (winner === 'T') {
+    msgEl.textContent = "It's a Tie!";
   } else {
-    msgEl.textContent = `${colors[turn].toUpperCase()}'s Turn`;
+
   }
+} else {
+  msgEl.textContent = `${colors[turn].toUpperCase()}'s Turn`;
+}
 }
 
 function init() {
-    board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-    winner = null;
-    turn = 1;
-    render();
+  board = ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'];
+  winner = null;
+  turn = 1;
+  render();
 }

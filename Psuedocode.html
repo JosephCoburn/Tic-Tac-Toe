@@ -16,15 +16,17 @@ const colors = {
 // x i i | i x i | i i x | i i i | x x x | i i i | i x i | i x i |
 // x i i | i x i | i i x | i i i | i i i | x x x | i i x | x i i |
 var win = [
-[x, 0, 0, x, 0, 0, x, 0, 0],
-[0, x, 0, 0, x, 0, 0, x, 0],
-[0, 0, x, 0, 0, x, 0, 0, x],
-[x, x, x, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, x, x, x, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, x, x, x],
-[x, 0, 0, 0, x, 0, 0, 0, x],
-[0, 0, x, 0, x, 0, x, 0, 0],
-];
+  [x, 'null', 'null', x, 'null', 'null', x, 'null', 'null'],
+  ['null', x, 'null', 'null', x, 'null', 'null', x, 'null'],
+  ['null', 'null', x, 'null', 'null', x, 'null', 'null', x],
+  [x, x, x, 'null', 'null', 'null', 'null', 'null', 'null'],
+  ['null', 'null', 'null', x, x, x, 'null', 'null', 'null'],
+  ['null', 'null', 'null', 'null', 'null', 'null', x, x, x],
+  [x, 'null', 'null', 'null', x, 'null', 'null', 'null', x],
+  ['null', 'null', x, 'null', x, 'null', x, 'null', 'null'],
+  ];
+
+ // where var x = 1 or -1
 
 2) Define required variables used to track the state of the game:
 	2.1) Use a board array to represent the squares.	2.2) Use a turn variable to 
