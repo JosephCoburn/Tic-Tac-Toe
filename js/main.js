@@ -17,7 +17,7 @@ var win = [
 ];
 
 /*----- app's state (variables) -----*/
-var board, turn;
+var board, turn, winner
 
 var winner = {
   'T': 'tie',
@@ -81,3 +81,12 @@ function init() {
   turn = 1;
   render();
 }
+
+
+
+// what does querySeectorAll do and why are we putting it on 'td div'
+// and why are we assigning its value as squares
+// what does querySelector do and why are we putting it on h1
+// and why is it message 
+// h1 is blank...
+// 
